@@ -1,4 +1,4 @@
-# 📱 Projet Développement Mobile - Master 2 SRT (2026)
+#  Projet Développement Mobile - Master 2 SRT (2026)
 
 Bienvenue dans le dépôt officiel de notre projet de développement d'applications mobiles , réalisé dans le cadre du **Master 2 Systèmes et Réseaux de Télécommunications (SRT)**. 
 
