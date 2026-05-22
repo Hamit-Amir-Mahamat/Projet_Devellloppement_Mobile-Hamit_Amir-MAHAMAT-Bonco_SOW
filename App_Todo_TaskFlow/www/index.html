@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TaskFlow APP</title>
+
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="login-page">
+        <div data-role="main" class="ui-content login-container">
+            <div class="login-header">
+                <h1><span class="logo-icon">☱</span> TaskFlow</h1>
+                <p>Planificateur de tâches</p>
+            </div>
+            <div class="login-form">
+                <input type="text" id="userName" placeholder="Votre nom d'utilisateur..." data-clear-btn="true">
+                <button id="loginBtn" class="btn-taskflow">Accéder à mon espace</button>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="todo-page">
+        <div data-role="main" class="ui-content no-padding">
+
+            <div class="mobile-wrapper">
+
+                <!-- HEADER -->
+                <header class="user-header">
+                    <div class="user-info">
+                        <span class="avatar" id="userAvatar">M</span>
+                        <span class="user-name" id="userNameDisplay">Mahamat</span>
+                    </div>
+                 <button id="logoutBtn" class="logout-btn" title="Déconnexion">
+                    <svg xmlns="http://w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                </button>
+                </header>
+
+                <div class="form-container">
+                    <h2 id="formTitle">Nouvelle Tâche</h2>
+                    <textarea id="taskInput" placeholder="Description de la tâche..." required></textarea>
+                    <input type="date" id="taskDate" required>
+                    <div class="form-actions">
+                        <button id="saveBtn" class="btn-taskflow">Enregistrer</button>
+                        <button id="cancelBtn" class="ui-btn ui-corner-all ui-mini">Annuler</button>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="progress-label" id="progressLabel">0 / 0 tâches terminées (0%)</span>
+                </div>
+
+                
+                <nav class="filter-tabs">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#" class="ui-btn-active filter-btn" data-filter="all">Toutes</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="active">En cours</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="completed">Terminées</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+        
+                <div class="scroll-list-area">
+                    <ul id="taskList" data-role="listview"></ul>
+                </div>
+                    <!-- PIED DE PAGE -->
+                    <footer class="app-footer">
+                        <span class="logo-icon">☱</span> TaskFlow &copy; <span id="footerYear">2026</span> - M2 SRT
+                    </footer>
+            </div>
+        </div>  
+
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+
+.no-padding { padding: 0 !important; }
+
+.mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #F1F5F9;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0D9488 0%, #0B847D 100%);
+}
+
+.login-header { text-align: center; color: white; margin-bottom: 28px; }
+.login-header h1 { font-size: 30px; margin: 0; }
+.login-header .logo-icon { font-size: 34px; }
+.login-header p { font-size: 14px; opacity: 0.9; }
+
+.login-form {
+    background: white;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 340px;
+}
+
+#userName {
+    width: 100% !important;
+    padding: 11px 12px !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+}
+
+.user-header {
+    background: linear-gradient(135deg, #0D9488 0%, #0B847D 100%);
+    padding: 12px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.user-info { display: flex; align-items: center; }
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.user-name { font-size: 15px; font-weight: 600; }
+
+.logout-btn {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: white !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.logout-btn:active { 
+    opacity: 0.6; 
+}
+
+.form-container {
+    background: white;
+    margin: 10px;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.15);
+}
+
+#formTitle {
+    color: #0D9488;
+    margin: 0 0 6px 0;
+    font-size: 17px;
+}
+
+textarea, input[type="date"] {
+    width: 100% !important;
+    padding: 9px 11px !important;
+    margin-top: 8px !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto !important;
+    box-sizing: border-box;
+}
+
+textarea { min-height: 46px; resize: none; }
+
+textarea:focus, input[type="date"]:focus {
+    border-color: #0D9488 !important;
+    outline: none;
+}
+
+.btn-taskflow {
+    background-color: #0D9488 !important;
+    color: white !important;
+    text-shadow: none !important;
+    border: none !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    cursor: pointer;
+    margin-top: 0 !important;
+}
+
+.login-form .btn-taskflow { margin-top: 14px !important; }
+
+.form-actions { display: flex; gap: 10px; margin-top: 10px; }
+.form-actions button { flex: 1; }
+.form-actions #cancelBtn { margin: 0 !important; }
+
+.progress-container {
+    padding: 10px 14px;
+    background: transparent;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background: #E2E8F0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #0D9488, #0B847D);
+    border-radius: 6px;
+    transition: width 0.4s ease;
+}
+
+.progress-label {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: #64748B;
+    font-weight: 600;
+    text-align: center;
+}
+
+.filter-tabs { margin: 0 10px; }
+
+.filter-tabs a {
+    padding: 9px 6px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.filter-tabs a.ui-btn-active {
+    background-color: #0D9488 !important;
+    color: white !important;
+    border-color: #0D9488 !important;
+}
+
+.scroll-list-area {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 10px 14px 10px;
+}
+
+#taskList { margin: 0; }
+
+#taskList li.task-item {
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.task-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 4px -2px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-task {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.task-check { font-size: 18px; color: #0D9488; }
+.task-text { font-size: 14px; color: #1E293B; }
+.task-date { font-size: 10px; color: #64748B; margin-left: 4px; white-space: nowrap; }
+
+.task-actions { display: flex; gap: 4px; margin-left: 8px; }
+
+.task-actions a {
+    text-decoration: none;
+    font-size: 16px;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #64748B;
+}
+.task-actions .edit-task:active { background: #CCFBF1; color: #0D9488; }
+.task-actions .delete-task:active { background: #FEE2E2; color: #EF4444; }
+
+.task-completed-text {
+    text-decoration: line-through;
+    color: #94A3B8 !important;
+}
+
+#taskList li.empty-state {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 30px 10px !important;
+    background: transparent !important;
+    border: none !important;
+}
+.app-footer {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #0D9488 0%, #0B847D 100%);
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 10px 12px;
+    letter-spacing: 0.3px;
+}
+.app-footer .logo-icon { font-size: 13px; }

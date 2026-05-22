@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Calculateur IMC</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="logo-health">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <!-- Croix médicale -->
+                    <rect x="14" y="4"  width="8" height="28" rx="3" fill="#0284C7"/>
+                    <rect x="4"  y="14" width="28" height="8"  rx="3" fill="#0284C7"/>
+                </svg>
+            </div>
+            <h1>Calculateur IMC</h1>
+            <p class="tagline">Évaluation de l'Indice de Masse Corporelle</p>
+        </header>
+
+        <main class="content-card" id="inputCard">
+            <div class="form-group">
+                <label for="poids">Poids (kg)</label>
+                <div class="input-field">
+                    <input type="number" id="poids" placeholder="Ex: 69" min="10" max="300">
+                    <span class="field-unit">kg</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="taille">Taille (m)</label>
+                <div class="input-field">
+                    <input type="number" id="taille" step="0.01" placeholder="Ex: 1.89" min="0.5" max="2.8">  <!-- Car selon les estimations la personne courte du monde messure 0,55m et la personne la plus longue du monde mésure 2.51 m  -->
+
+                    <span class="field-unit">m</span>
+                </div>
+            </div>
+
+            <button id="calculerBtn" class="btn-primary">Analyser mon profil</button>
+        </main>
+
+        <section id="resultatArea" class="content-card hidden">
+
+            <h2 class="result-title">Bilan d'Indice de Masse Corporelle</h2>
+
+            <div class="result-score-box">
+                <span class="score-label">Votre indice est de :</span>
+                <div id="valeurIMC" class="score-value">--</div>
+            </div>
+
+            <div class="status-badge" id="statusBadge">--</div>
+
+            <p id="conseilIMC" class="medical-advice"></p>
+
+            <div class="linear-scale">
+                <div class="scale-row">
+                    <div class="scale-block maigre">  <span>&lt;18.5</span><small>Maigreur</small> </div>
+                    <div class="scale-block normal">  <span>18.5–25</span><small>Normal</small>    </div>
+                    <div class="scale-block surpoids"><span>25–30</span>  <small>Surpoids</small>  </div>
+                    <div class="scale-block obese">   <span>30–35</span>  <small>Ob. I</small>     </div>
+                    <div class="scale-block obese2">  <span>35–40</span>  <small>Ob. II</small>    </div>
+                    <div class="scale-block obese3">  <span>&gt;40</span> <small>Ob. III</small>   </div>
+                </div>
+            </div>
+
+            <button id="resetBtn" class="btn-subtle">Faire un nouveau calcul</button>
+
+        </section>
+        <footer class="app-footer">
+            <p>Développés par <strong>Mahamat Hamit Amir & Bonco Sow</strong></p>
+            <p class="source-mention">ESP - M2SRT • 2026</p>
+        </footer>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
